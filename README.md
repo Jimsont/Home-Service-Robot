@@ -31,20 +31,20 @@ Steps
 - Create ros package `pick_objects` by command `catkin_create_pkg pick_objects move_base_msgs actionlib roscpp`
 - Create .cpp file `pick_objects` and modified the code. You can find `pick_objects.cpp` in the folder `pick_objects/src/`
 - Edit the `CMakeLists.txt` file and add `directories`, `executable`, and `target_link_libraries`. You can find `CMakeLists.txt` in `pick_objects/`
-- Create a `pick_objects.sh` file that will send multiple goals for the robot to reach.  
+- Create a `pick_objects.sh` file that will send multiple goals for the robot to reach. You can find this file in folder `scripts`
+- Switch terminal directory to `catkin_ws/`. Then, build `catkin_ws` by terminal command `catkin_make` 
 - Launch `pick_objects.sh` by command `./pick_objects.sh`
 ![image](https://user-images.githubusercontent.com/15081906/156515759-044fc68b-f72f-4d99-8660-e6aac6f7e8b0.png)
-### Home Service Functions  
-You will create a `add_marker.sh` file that will publish a marker to rviz.  
-The marker should initially be published at the pickup zone. After 5 seconds it should be hidden. Then after another 5 seconds it should appear at the drop off zone.
-The student should write a home_service.sh file that will run all the nodes in this project.  
-The student's home service robot should be simulated as follow:  
-* Initially show the marker at the pickup zone.
-* Hide the marker once your robot reach the pickup zone.
-* Wait 5 seconds to simulate a pickup.
-* Show the marker at the drop off zone once your robot reaches it.
-
-
+### Home Service Robot
+In this project, you will write an add_marker node that subscribe to your odometry to keep track of your robot pose. When the robot reaches pick-up zone, the add_marker node will delete the marker in Rviz, and when the robot reaches drop-off zone, the add_marker node will show marker again in Rviz.
+Step
+- Create ros package `add_markers` by terminal command `catkin_create_pkg add_markers visualization_msgs roscpp`
+- Create .cpp file `add_markers` and modified the code. You can find `add_markers.cpp` in the folder `ad_markers/src/`
+- Edit the `CMakeLists.txt` file and add `executable`, and `target_link_libraries`. You can find `CMakeLists.txt` in `add_markers/`
+- Create a `home_service.sh` file that will send multiple goals for the robot to reach. You can find this file in folder `scripts`
+- Switch terminal directory to `catkin_ws/`. Then, build `catkin_ws` by terminal command `catkin_make` 
+- Launch `home_service.sh` by command `./home_service.sh`. In Rviz, you will see your robot is going to pick up the marker.
+![image](https://user-images.githubusercontent.com/15081906/156518475-f1d4a6f9-0688-4492-99b2-00855bae386b.png)
 ## Prerequisites/Dependencies  
 * Gazebo >= 7.0  
 * ROS Kinetic  
