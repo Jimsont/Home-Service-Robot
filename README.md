@@ -1,5 +1,5 @@
 # P5-Home-Service-Robot
-Udacity Robotics Software Engineer Nanodegree 
+Project 5 of Udacity Robotics Software Engineer Nanodegree 
 
 ## Overview  
 In this project, you will use everything you learned in the Nanodegree Program to build a Home Service Robot in ROS.
