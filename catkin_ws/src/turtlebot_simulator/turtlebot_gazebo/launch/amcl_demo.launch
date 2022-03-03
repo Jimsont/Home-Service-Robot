@@ -2,7 +2,6 @@
   <!-- Map server -->
   <!-- <arg name="map_file" default="$(env TURTLEBOT_GAZEBO_MAP_FILE)"/> -->
   <arg name="map_file" default="$(find my_robot)/maps/final_map.yaml"/>
-  <!-- <arg name="map_file" default="catkin_ws/src/map/final_map.yaml"/> -->
   <arg name="3d_sensor" default="$(env TURTLEBOT_3D_SENSOR)"/>  <!-- r200, kinect, asus_xtion_pro -->
 
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />

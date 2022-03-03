@@ -134,6 +134,7 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/add_markers_node.cpp)
 add_executable(${PROJECT_NAME} src/add_markers.cpp)
+add_executable(add_markers_test src/add_markers_test.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -149,6 +150,7 @@ add_executable(${PROJECT_NAME} src/add_markers.cpp)
 target_link_libraries(${PROJECT_NAME}
    ${catkin_LIBRARIES}
 )
+target_link_libraries(add_markers_test ${catkin_LIBRARIES})
 
 #############
 ## Install ##
