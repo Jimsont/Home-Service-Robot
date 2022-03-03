@@ -165,27 +165,27 @@ Change `world_file` path in `turtlebot_world.launch`
 ```
 ## Package Function Explanation
 1. add_markers package
-- This package includes two .cpp files `add_markers.cpp` and `add_markers_test`. `add_markers.cpp` includes node that subscribe robot odometry and use robot odometry information to simulate if marker has been picked up or dropped off, and then show marker on Rviz. `add_markers_test` includes node that will add and delete marker in Rviz. 
+ - This package includes two .cpp files `add_markers.cpp` and `add_markers_test`. `add_markers.cpp` includes node that subscribe robot odometry and use robot odometry information to simulate if marker has been picked up or dropped off, and then show marker on Rviz. `add_markers_test` includes node that will add and delete marker in Rviz. 
 
 2. my_robot package
-- This package includes `.yaml map` file and `world` file. The world file will be loaded when `turetlebot_world.launch` has been launced.
-- The `.yaml map` file will be loaded when `amcl_demo.launched` has been launched 
+ - This package includes `.yaml map` file and `world` file. The world file will be loaded when `turetlebot_world.launch` has been launced.
+ - The `.yaml map` file will be loaded when `amcl_demo.launched` has been launched 
 
 3. pick_objects
-- This package defines a client for sending goal requests to the `move_base server` through a `SimpleActionClient` in order to move the robot
+ - This package defines a client for sending goal requests to the `move_base server` through a `SimpleActionClient` in order to move the robot
 
 4. slam_gmapping package
-- slam_gmapping contains a wrapper around `gmapping` which provides SLAM capabilities
-- `gmapping` is a package contains a ROS wrapper for OpenSlam's Gmapping. The gmapping package provides laser-based SLAM (Simultaneous Localization and Mapping), as a ROS node called slam_gmapping. Using slam_gmapping, you can create a 2-D occupancy grid map (like a building floorplan) from laser and pose data collected by a mobile robot.
+ - slam_gmapping contains a wrapper around `gmapping` which provides SLAM capabilities
+ - `gmapping` is a package contains a ROS wrapper for OpenSlam's Gmapping. The gmapping package provides laser-based SLAM (Simultaneous Localization and Mapping), as a ROS node called slam_gmapping. Using slam_gmapping, you can create a 2-D occupancy grid map (like a building floorplan) from laser and pose data collected by a mobile robot.
 
 5. turtlebot_teleop package
-- This package allows user to manually control a robot using keyboard commands.
+ - This package allows user to manually control a robot using keyboard commands.
 
 6. turtlebot_rviz_launchers package
-- With the `view_navigation.launch` file, you can load a preconfigured rviz workspace. It will automatically load the robot model, trajectories, and map for you.
+ - With the `view_navigation.launch` file, you can load a preconfigured rviz workspace. It will automatically load the robot model, trajectories, and map for you.
 
 7. turtlebot_gazebo package
-- With the `turtlebot_world.launch` you can deploy a turtlebot in a gazebo environment by linking the world file to it.
+ - With the `turtlebot_world.launch` you can deploy a turtlebot in a gazebo environment by linking the world file to it.
 
 ## Code Style  
 Please (do your best to) stick to [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html).
