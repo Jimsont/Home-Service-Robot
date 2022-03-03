@@ -23,12 +23,17 @@ The task of this project is to pick two different goals and test your robot's ab
 Steps
 - Create a `test_navigation.sh` script file to launch it for manual navigation test.  
 - Change terminal directory to `scripts`. Then, launch `test_slam.sh` by terminal command `./test_slam.sh`
-- After Rviz is launched, you can use 
+- After Rviz is launched, you can use `2D Nav Goal` to manually point out to two different goals, one at a time, and direct your robot to reach them and orient itself with respect to them.
 ![image](https://user-images.githubusercontent.com/15081906/156513107-f69914d7-6ad8-4b01-8efa-e3a0fe925787.png)
-
-Your robot should be able to navigate in the environment after a 2D Nav Goal command is issued.  
-You will create a `pick_objects.sh` file that will send multiple goals for the robot to reach.  
-The robot travels to the desired pickup zone, displays a message that it reached its destination, waits 5 seconds, travels to the desired drop off zone, and displays a message that it reached the drop off zone."  
+### Navigation Goal Node
+You will write a node that will communicate with the ROS navigation stack and autonomously send successive goals for your robot to reach. 
+Steps
+- Create ros package `pick_objects` by command `catkin_create_pkg pick_objects move_base_msgs actionlib roscpp`
+- Create .cpp file `pick_objects` and modified the code. You can find `pick_objects.cpp` in the folder `pick_objects/src/`
+- Edit the `CMakeLists.txt` file and add `directories`, `executable`, and `target_link_libraries`. You can find `CMakeLists.txt` in `pick_objects/`
+- Create a `pick_objects.sh` file that will send multiple goals for the robot to reach.  
+- Launch `pick_objects.sh` by command `./pick_objects.sh`
+![image](https://user-images.githubusercontent.com/15081906/156515759-044fc68b-f72f-4d99-8660-e6aac6f7e8b0.png)
 ### Home Service Functions  
 You will create a `add_marker.sh` file that will publish a marker to rviz.  
 The marker should initially be published at the pickup zone. After 5 seconds it should be hidden. Then after another 5 seconds it should appear at the drop off zone.
