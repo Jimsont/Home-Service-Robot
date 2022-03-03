@@ -14,7 +14,7 @@ Steps
 - Turn script ino an executable one with "chomd +x launch.sh"
 - Test script file with "./launch.sh"
 ### Mapping  
-The goal of this step is to manually test SLAM. We will write a shell script test_slam.sh that will deploy a turtlebot inside your environment, control it with keyboard commands, interface it with a SLAM package, and visualize the map in rviz.
+The goal of this step is to manually test SLAM. You will write a shell script "test_slam.sh" that will deploy a turtlebot inside your environment, control it with keyboard commands, interface it with a SLAM package, and visualize the map in rviz. You can find the file "test_slam.sh" in the folder "scripts".  
 ### Localization and Navigation  
 You will create a `test_navigation.sh` script file to launch it for manual navigation test.  
 Your robot should be able to navigate in the environment after a 2D Nav Goal command is issued.  
