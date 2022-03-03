@@ -153,6 +153,10 @@ Change `world_file` path in `turtlebot_world.launch`
 - Replace `<arg name="world_file" default="$(env TURTLEBOT_GAZEBO_WORLD_FILE)"/>` by `<arg name="world_file" default="$(find my_robot)/worlds/myworld"/>`
 
 7. To change turtlebot spawn location
-- Replace 'args="$(optenv ROBOT_INITIAL_POSE) -unpause -urdf -param robot_description -model mobile_base"/>' by 'args="-x 0 -y 0 -Y 1.5707 -unpause -unpause -urdf -param robot_description -model mobile_base"/>'. In the line, x: x position, y:y position, Y:yaw.
+- Open file `kobuki.launch.xml`
+- Replace `args="$(optenv ROBOT_INITIAL_POSE) -unpause -urdf -param robot_description -model mobile_base"/>` by `args="-x 0 -y 0 -Y 1.5707 -unpause -unpause -urdf -param robot_description -model mobile_base"/>`. In the line, x: x position, y:y position, Y:yaw.
+
+8. Update Rviz config
+- Open file `view_nagivation.launch` in folder `turtlebot_interactions/turtlebot_rviz_launchers/launch/` 
 ## Code Style  
 Please (do your best to) stick to [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html).
