@@ -2,7 +2,17 @@
 Udacity Robotics Software Engineer Nanodegree 
 
 ## Overview  
-In this project, you will use everything you learned in the Nanodegree Program to build a Home Service Robot in ROS.  
+In this project, you will use everything you learned in the Nanodegree Program to build a Home Service Robot in ROS.
+### Shell Scripts
+A shell script is a file containing a series of commands and could be executed. It is commonly used to set up environment, run a program.
+You will create a launch.sh script and use it to launch Gazebo and Rviz in separate instances of terminals.
+Steps
+- Install xterm with "sudo apt-get install xterm"
+- Create launch.sh file
+- Write following lines in to launch.sh file
+![image](https://user-images.githubusercontent.com/15081906/156510083-37491a7f-deea-4ab0-a944-ac870853f4dc.png)
+- Turn script ino an executable one with "chomd +x launch.sh"
+- Test script file with "./launch.sh"
 ### Mapping  
 You will create a `test_slam.sh` script file and launch it to manually test SLAM.  
 A functional map of the environment should be created which would be used for localization and navigation tasks.  
@@ -71,7 +81,6 @@ git clone https://github.com/turtlebot/turtlebot_simulator.git
 ## Project Description  
 Directory Structure  
 ```
-.Home-Sevice-Robot                                        # Home Service Robot Project
 ├── catkin_ws                                             # Catkin workspace
 │   ├── src
 │   │   ├── add_markers                                   # add_markers package        
