@@ -74,7 +74,7 @@ sudo apt-get install ros-kinetic-amcl
   * Windows: recommend using [MinGW](http://www.mingw.org/)
 
 
-## Setup Instructions (abbreviated)  
+## Setup Instructions 
 1. Meet the `Prerequisites/Dependencies`  
 2. Open Ubuntu Bash and clone the project repository  
 3. On the command line and execute  
@@ -83,7 +83,7 @@ sudo apt-get update && sudo apt-get upgrade -y
 ```
 4. On the command line and execute  
 ```
-cd RoboND-Term1-P5-Home-Service-Robot/catkin_ws/src  
+cd /catkin_ws/src  
 git clone https://github.com/ros-perception/slam_gmapping.git  
 git clone https://github.com/turtlebot/turtlebot.git  
 git clone https://github.com/turtlebot/turtlebot_interactions.git  
@@ -93,56 +93,14 @@ git clone https://github.com/turtlebot/turtlebot_simulator.git
 
 ## Project Description  
 Directory Structure  
-```
-├── catkin_ws                                             # Catkin workspace
-│   ├── src
-│   │   ├── add_markers                                   # add_markers package        
-│   │   │   ├── launch
-│   │   │   │   ├── view_home_service_navigation.launch   # launch file for home service robot demo
-│   │   │   ├── src
-│   │   │   │   ├── add_markers.cpp                       # source code for add_markers node
-│   │   │   │   ├── add_markers_demo.cpp                  # source code for add_markers_demo
-│   │   ├── pick_objects                                  # pick_objects package     
-│   │   │   ├── src
-│   │   │   │   ├── pick_objects.cpp                      # source code for pick_objects node
-│   │   │   │   ├── pick_objects_demo.cpp                 # source code for pick_objects_demo
-│   │   ├── rvizConfig                                    # rvizConfig package        
-│   │   │   ├── home_service_rvizConfig.rviz              # rvizConfig file for home service robot demo  
-│   │   ├── scripts                                       # shell scripts files
-│   │   │   ├── add_marker.sh                             # shell script to model virtual objects  
-│   │   │   ├── home_service.sh                           # shell script to launch home service robot demo  
-│   │   │   ├── pick_objects.sh                           # shell script to send multiple goals  
-│   │   │   ├── test_navigation.sh                        # shell script to test localization and navigation
-│   │   │   ├── test_slam.sh                              # shell script to test SLAM
-│   │   ├── slam_gmapping                                 # gmapping_demo.launch file
-│   │   ├── turtlebot                                     # keyboard_teleop.launch file
-│   │   ├── turtlebot_interactions                        # view_navigation.launch file
-│   │   ├── turtlebot_simulator                           # turtlebot_world.launch file package        
-│   │   ├── CMakeLists.txt                                # compiler instructions
-├── video.mp4                                             # Videos for overview
-├── video.gif                                             # GIF for overview
-```
-- [view_home_service_navigation.launch](/catkin_ws/src/add_markers/launch/view_home_service_navigation.launch): Launch rviz with specify rviz configuration file  
-- [add_markers.cpp](/catkin_ws/src/pick_objects/src/add_markers.cpp): C++ script, communicate with `pick_objects` node and control the marker appearance to simulate object pick up and drop off   
-- [pick_objects.cpp](/catkin_ws/src/pick_objects/src/pick_objects.cpp): C++ script, communicate with `add_markers` node and command the robot to pick up the object  
-- [home_service_rvizConfig.rviz](/catkin_ws/src/rvizConfig/home_service_rvizConfig.rviz): rvizConfig file for home service robot demo which contained `markers` option  
-- [add_marker.sh](/catkin_ws/src/scripts/add_marker.sh): Shell script file to deploy a turtlebot inside your environment, model a virtual object with markers in `rviz`.  
-- [home_service.sh](/catkin_ws/src/scripts/home_service.sh): Shell script file to deploy a turtlebot inside your environment, simulate a full home service robot capable of navigating to pick up and deliver virtual objects.  
-- [pick_objects.sh](/catkin_ws/src/scripts/pick_objects.sh): Shell script file to deploy a turtlebot inside your environment, communicate with the ROS navigation stack and autonomously send successive goals for your robot to reach.  
-- [test_navigation.sh](/catkin_ws/src/scripts/test_navigation.sh): Shell script file to deploy a turtlebot inside your environment, pick two different goals and test your robot's ability to reach them and orient itself with respect to them.  
-- [test_slam.sh](/catkin_ws/src/scripts/test_slam.sh): Shell script file to deploy a turtlebot inside your environment, control it with keyboard commands, interface it with a SLAM package, and visualize the map in `rviz`  
-
-- [CMakeLists.txt](/catkin_ws/src/CMakeLists.txt): File to link the C++ code to libraries.  
-- [video.gif](video.gif): A gif of video for final home service robot run  
-
+![image](https://user-images.githubusercontent.com/15081906/156519792-ab6e0b61-bac2-4868-a3ef-76593106eeb7.png)
 ## Run the project  
 * Clone this repository
 ```
-
 ```
 * Navigate to the `src` folder and clone the necessary repositories  
 ```
-cd RoboND-Term1-P5-Home-Service-Robot/catkin_ws/src  
+cd /catkin_ws/src  
 git clone https://github.com/ros-perception/slam_gmapping.git  
 git clone https://github.com/turtlebot/turtlebot.git  
 git clone https://github.com/turtlebot/turtlebot_interactions.git  
@@ -189,5 +147,6 @@ To see the marker(virtual objects) demo, in addition to running the `./add_marke
 * Click 'OK' button  
 * Done, you should see the marker(virtual objects) appear, disappear then appear again  
 
+6. To use map and 
 ## Code Style  
 Please (do your best to) stick to [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html).
