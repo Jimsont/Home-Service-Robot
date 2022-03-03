@@ -13,10 +13,16 @@ Steps
 ![image](https://user-images.githubusercontent.com/15081906/156510083-37491a7f-deea-4ab0-a944-ac870853f4dc.png)
 - Turn script ino an executable one with "chomd +x launch.sh"
 - Test script file with "./launch.sh"
-### Mapping  
+### SLAM Testing 
 The goal of this step is to manually test SLAM. You will write a shell script "test_slam.sh" that will deploy a turtlebot inside your environment, control it with keyboard commands, interface it with a SLAM package, and visualize the map in rviz. You can find the file "test_slam.sh" in the folder "scripts".  
-### Localization and Navigation  
-You will create a `test_navigation.sh` script file to launch it for manual navigation test.  
+Steps
+- Create "test_slam.sh"
+- Change terminal directory to "scripts". Then, launch "test_slam.sh" by terminal command "./test_slam.sh" 
+### Localization and Navigation Testing
+The task of this project is to pick two different goals and test your robot's ability to reach them and orient itself with respect to them. You will be using the ROS Navigation stack, which is based on the Dijkstra's, a variant of the Uniform Cost Search algorithm, to plan our robot trajectory from start to goal position. 
+Steps
+- Create a 'test_navigation.sh' script file to launch it for manual navigation test.  
+- Change terminal directory to "scripts". Then, launch "test_slam.sh" by terminal command "./test_slam.sh" 
 Your robot should be able to navigate in the environment after a 2D Nav Goal command is issued.  
 You will create a `pick_objects.sh` file that will send multiple goals for the robot to reach.  
 The robot travels to the desired pickup zone, displays a message that it reached its destination, waits 5 seconds, travels to the desired drop off zone, and displays a message that it reached the drop off zone."  
