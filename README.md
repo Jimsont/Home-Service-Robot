@@ -165,7 +165,7 @@ Change `world_file` path in `turtlebot_world.launch`
 ```
 ## Package Function Explanation
 1. add_markers package
- - This package includes two .cpp files `add_markers.cpp` and `add_markers_test`. `add_markers.cpp` includes node that subscribe robot odometry and use robot odometry information to simulate if marker has been picked up or dropped off, and then show marker on Rviz. `add_markers_test` includes node that will add and delete marker in Rviz. 
+- This package includes two .cpp files `add_markers.cpp` and `add_markers_test`. `add_markers.cpp` includes node that subscribe robot odometry and use robot odometry information to simulate if marker has been picked up or dropped off, and then show marker on Rviz. `add_markers_test` includes node that will add and delete marker in Rviz. 
 
 2. my_robot package
  - This package includes `.yaml map` file and `world` file. The world file will be loaded when `turetlebot_world.launch` has been launced.
