@@ -146,17 +146,22 @@ To see the marker(virtual objects) demo, in addition to running the `./add_marke
 * Done, you should see the marker(virtual objects) appear, disappear then appear again  
 
 6. To use world and map in my_robot package
+```
 In this repository, the map used is saved in my_robot package. Change the `map_file` path in `amcl_demo.launch`. 
 - Replace `<arg name="map_file" default="$(env TURTLEBOT_GAZEBO_MAP_FILE)"/>` by `<arg name="map_file" default="$(find my_robot)/maps/final_map.yaml"/>`
 
 Change `world_file` path in `turtlebot_world.launch`
 - Replace `<arg name="world_file" default="$(env TURTLEBOT_GAZEBO_WORLD_FILE)"/>` by `<arg name="world_file" default="$(find my_robot)/worlds/myworld"/>`
-
+```
 7. To change turtlebot spawn location
+```
 - Open file `kobuki.launch.xml`
 - Replace `args="$(optenv ROBOT_INITIAL_POSE) -unpause -urdf -param robot_description -model mobile_base"/>` by `args="-x 0 -y 0 -Y 1.5707 -unpause -unpause -urdf -param robot_description -model mobile_base"/>`. In the line, x: x position, y:y position, Y:yaw.
-
+```
 8. Update Rviz config
+```
 - Open file `view_nagivation.launch` in folder `turtlebot_interactions/turtlebot_rviz_launchers/launch/` 
+- `<node name="rviz" pkg="rviz" type="rviz" args="-d $(find turtlebot_rviz_launchers)/rviz/<your own rviz config file name>"/>`
+```
 ## Code Style  
 Please (do your best to) stick to [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html).
